@@ -1,4 +1,5 @@
 using System.Collections;
+
 using UnityEngine;
 
 
@@ -21,6 +22,7 @@ public class ChessPieceSelect : MonoBehaviour
     public GameObject bishopPrefab;
 
     private GameObject[] pieces;
+    public float handlebordersize= 1f;// white border size change in inspector
 
     private void Update()
     {
@@ -53,7 +55,6 @@ private void Awake()
             selectedPiecePrefab.SetActive(true);
         }
     }
-
     private void DisableAllPieces()
     {
         foreach (var piece in pieces)
